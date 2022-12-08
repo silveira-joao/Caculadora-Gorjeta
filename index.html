@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.000">
+    <link rel="stylesheet" href="styles.css">
+    <Title>Calculadora de Gorjetas</Title>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <h1 class="title">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsForm" id="tipsForm">
+                <label for="bill">
+                    <p>Qual o valor total da conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="100,00" name="bill" id="bill" class="formInputBill" required>
+                </p>
+                <label for="serviceQual">
+                    <p>
+                        O que achou do atendimento?
+                    </p>
+                </label>
+                <p>
+                    <select name="serviceQual" id="serviceQual" class="formSelect" required>
+                        <option disable selected value="0">-- Selecione um valor --</option>
+                        <option value="0.3">30% - Incrível</option>
+                        <option value="0.2">20% - Bom</option>
+                        <option value="0.15">15% - Aceitável</option>
+                        <option value="0.1">10% - Ruim</option>
+                        <option value="0.05">05% - Péssimo</option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p>Em quantas pessoas a conta será divida?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="2" name="people" id="people" class="formInput" required> Pessoa(s)
+                </p>
+                <button type="submit" class="formSubmit">Calcular!</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorjeta Total:
+            R$ <span id="tip">0,00</span>
+            <span id="each">para cada pessoa!</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>
